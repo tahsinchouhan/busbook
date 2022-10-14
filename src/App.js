@@ -1,9 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Badal from "./pages/badal";
-import BastarArt from "./pages/bastarArt";
-
 import "antd/dist/antd.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./assets/css/app.css";
@@ -16,7 +13,6 @@ import TicketsSraech from "./pages/booking/tickets/TicketsSreach";
 import DmCongratulate from "./pages/dm pass/dmtickets/DmCongratulate";
 import DmDetail from "./pages/dm pass/dmtickets/DmDetail";
 import TravelTicket from "./pages/dm pass/dmtickets/TravelTicket";
-import Interest from "./pages/explore/Interest";
 import Boarding from "./pages/selectbooking/Boarding";
 import BusCard from "./pages/selectbooking/BusCard";
 import BusConfirmation from "./pages/selectbooking/BusConfirmation";
@@ -39,22 +35,6 @@ import PackageTicketDetail from "./pages/selectbooking/PackageTicketDetail";
 
 /// imports Hotel Details
 import "./assets/css/hotellist.css";
-import HotelDetails from "./pages/Hotel/HotelDetails";
-import HotelList from "./pages/Hotel/HotelList";
-import HotelSearch from "./pages/Hotel/HotelSearch";
-import HotelSingleDetails from "./pages/hotelBooking/HotelSingleDetails";
-import HotelTicketPay from "./pages/selectbooking/AtHotelPay";
-import Hcongratulations from "./pages/selectbooking/hCongratulations";
-import HotelConfirmation from "./pages/selectbooking/HotelConfirmation";
-import HotelTicketDetail from "./pages/selectbooking/HotelTicketDetail";
-
-import CabConfirmation from "./pages/Cab/CabConfirmation";
-import CabList from "./pages/Cab/CabList";
-import Cab from "./pages/Cab/CabSearch";
-
-import AudioJourney from "./pages/audioJourney/AudioJourney";
-import AudioJourneyDetail from "./pages/audioJourneyDeatil/AudioJourneyDetail";
-import PromotionalContent from "./pages/promotionalContent";
 
 function App() {
   return (
@@ -165,57 +145,6 @@ function App() {
             <Route exact path="/ ticket_checkout" component={TicketCheckOut} />
             <Route exact path="/payment" component={Payment} />
             <Route exact path="/hpayment" component={hPayment} />
-            <Route exact path="/interest" component={Interest} />
-            {/* For Hotel Details */}
-            <Route exact path="/hotelsearch" component={HotelSearch} />
-            <Route
-              exact
-              path="/hotelDetails/:name/:startDate/:endDate"
-              component={HotelDetails}
-            />
-            <Route exact path="/hotelList" component={HotelList} />
-            <Route
-              exact
-              path="/hotelSingleDetails/:name"
-              component={HotelSingleDetails}
-            />
-            <Route
-              exact
-              path="/Hcongratulation-page"
-              component={Hcongratulations}
-            />
-            <Route
-              exact
-              path="/hotel-details-book/:id"
-              component={HotelTicketDetail}
-            />
-            <Route
-              exact
-              path="/hotel-details-pay/:id"
-              component={HotelTicketPay}
-            />
-            <Route
-              exact
-              path="/hotelconfirmation/:id"
-              component={HotelConfirmation}
-            />
-            <Route exact path="/cabconfirmation" component={CabConfirmation} />
-            <Route exact path="/checkoutpage" component={CheckoutPage} />
-            <Route exact path="/cab" component={Cab} />
-            <Route exact path="/cablist" component={CabList} />
-            <Route exact path="/audioJourney" component={AudioJourney} />
-            <Route
-              exact
-              path="/audioJourney/:id"
-              component={AudioJourneyDetail}
-            />
-            <Route exact path="/badal" component={Badal} />
-            <Route exact path="/kalagudi" component={BastarArt} />
-            <Route
-              exact
-              path="/promotionalContent"
-              component={PromotionalContent}
-            />
           </Switch>
         </div>
       </Router>
