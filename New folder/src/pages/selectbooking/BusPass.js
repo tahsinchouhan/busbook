@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Form, Dropdown, Button } from "react-bootstrap";
-import { Redirect } from "react-router-dom";
-import "../../assets/css/buspass.css";
+import { AvField, AvForm } from "availity-reactstrap-validation";
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { FaSpinner } from "react-icons/fa";
-import bus from "../../assets/img/bus.png";
-import { useHistory } from "react-router-dom";
-import Footer from "../travesaly/Footer";
-import Header from "../../components/Header";
 import { connect, useDispatch, useSelector } from "react-redux";
-import { fetchStart, getOtp, verifyOtp } from "../../redux/actions";
+import { Redirect, useHistory } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "../../assets/css/buspass.css";
+import bus from "../../assets/img/bus.png";
+import Header from "../../components/Header";
 import Message from "../../components/Message";
-import { AvForm, AvField } from "availity-reactstrap-validation";
 import LoginModal from "../../components/modal/LoginModal";
+import { fetchStart, getOtp, verifyOtp } from "../../redux/actions";
 import SeoData from "../../SeoData.json";
-import { ToastContainer, toast } from "react-toastify";
+import Footer from "../travesaly/Footer";
 
 function BusDetail({ loading }) {
   const history = useHistory();
@@ -282,7 +281,6 @@ function BusDetail({ loading }) {
                     style={{ height: "50px", fontSize: "12px" }}
                     onChange={(e) => setNumber(e.target.value)}
                     value={number}
-                    style={{ fontSize: "12px" }}
                     name="Mobile Number"
                     type="number"
                     className="bus_input"

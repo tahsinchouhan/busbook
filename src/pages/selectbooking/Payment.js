@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Form, Dropdown, Button } from "react-bootstrap";
-import Header from "../../components/Header";
-import Footer from "../travesaly/Footer";
-import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { API_PATH } from "../../Path/Path";
+import { AvField, AvForm } from "availity-reactstrap-validation";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "../../components/Header";
+import { API_PATH } from "../../Path/Path";
 import { createBusBooking, setApiData } from "../../redux/actions";
-import { AvForm, AvField } from "availity-reactstrap-validation";
+import Footer from "../travesaly/Footer";
 
 async function loadScript(src) {
   return new Promise((resolve) => {
@@ -80,7 +80,7 @@ function Payment() {
       currency: "INR",
       amount: data?.amount.toString(),
       // order_id: data.id,
-      name: "Aamcho Bastar",
+      name: "Bus Book",
       description: "Thank You For Booking.",
       image: "https://travelbastar.com/static/media/logo.0a3bc983.png",
 

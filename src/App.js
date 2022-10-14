@@ -1,100 +1,56 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import PreHome from "./pages/PreHome";
-import Packages from "./pages/Packages";
-import Destination from "./pages/Destination";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import HomestaysInBastar from "./pages/HomestaysInBastar";
-import TourPackagesinBastar from "./pages/TourPackagesInBastar";
-import TaxiInBastar from "./pages/TaxiInBastar";
-import TourGuidesInBastar from "./pages/TourGuidesInBastar";
-import TourOperatorsInBastar from "./pages/TourOperatorsInBastar";
 import Badal from "./pages/badal";
 import BastarArt from "./pages/bastarArt";
 
-import PlanHomeStays from "./pages/plan/Plan";
-import PlanTaxis from "./pages/plan/PlanTaxis";
-import PlanTourGuides from "./pages/plan/PlanTourGuides";
-import PlanTourPackages from "./pages/plan/PlanTourPackages";
-import EventsAndActivities from "./pages/plan/EventsAndActivities";
-
-import SelectBooking from "./pages/selectbooking/SelectBooking";
-import Pass from "./pages/selectbooking/Pass";
-import BusPass from "./pages/selectbooking/BusPass";
-import "./assets/css/app.css";
 import "antd/dist/antd.css";
 import "react-toastify/dist/ReactToastify.css";
+import "./assets/css/app.css";
 
-import Search from "./pages/travesaly/Search";
-import Explores from "./pages/explore/Explores";
-import Interest from "./pages/explore/Interest";
-import DestinationDetails from "./pages/explore/DestinationDetails";
-import PackagesDetails from "./pages/explore/PackagesDetails";
-import BookPass from "./pages/explore/BookPass";
-import BookingDetails from "./pages/explore/BookingDetails";
-import BookingConformation from "./pages/explore/BookingConfirmation";
-import CheckOutBook from "./pages/explore/checkoutBooking";
-import BookingPayment from "./pages/explore/BookingPayement";
-import CovidResponse from "./Footer/CovidResponse";
-import CabOperator from "./Footer/CabOperator";
-import TourOperator from "./Footer/TourOperator";
-import RegistrationGuide from "./Footer/RegistrationGuide";
-import DmPass from "./pages/dm pass/DmPass";
-import Locations from "./pages/dm pass/Locations";
-import BusDetail from "./pages/selectbooking/BusDetail";
-import BusMonsoon from "./pages/selectbooking/BusMonsoon";
-import Boarding from "./pages/selectbooking/Boarding";
-import BusDropoff from "./pages/selectbooking/BusDropoff";
-import BusConfirmation from "./pages/selectbooking/BusConfirmation";
-import BusCard from "./pages/selectbooking/BusCard";
-import CheckoutPage from "./pages/selectbooking/CheckoutPage";
-import HCheckoutPage from "./pages/selectbooking/hotelcheckout";
-import CongratulationPage from "./pages/selectbooking/CongratulationPage";
-import AddForm from "./pages/VenderOrgAdd/AddForm";
-import AddHotel from "./pages/VenderOrgAdd/AddHotel";
-import RatanCard from "./pages/selectbooking/RatanCard";
-import DmTicket2 from "./pages/dm pass/dmtickets/DmTicket2";
-import TravelTicket from "./pages/dm pass/dmtickets/TravelTicket";
-import DmDetail from "./pages/dm pass/dmtickets/DmDetail";
-import DmCongratulate from "./pages/dm pass/dmtickets/DmCongratulate";
-import TicketsSraech from "./pages/booking/tickets/TicketsSreach";
-import Tickets1 from "./pages/booking/tickets/Tickets1";
+import "./assets/css/mediaQuery.css";
 import SteperDmpass from "./pages/booking/tickets/SteperDmpass";
 import TicketCheckOut from "./pages/booking/tickets/TicketCheckOut";
+import Tickets1 from "./pages/booking/tickets/Tickets1";
+import TicketsSraech from "./pages/booking/tickets/TicketsSreach";
+import DmCongratulate from "./pages/dm pass/dmtickets/DmCongratulate";
+import DmDetail from "./pages/dm pass/dmtickets/DmDetail";
+import TravelTicket from "./pages/dm pass/dmtickets/TravelTicket";
+import Interest from "./pages/explore/Interest";
+import Boarding from "./pages/selectbooking/Boarding";
+import BusCard from "./pages/selectbooking/BusCard";
+import BusConfirmation from "./pages/selectbooking/BusConfirmation";
+import BusDetail from "./pages/selectbooking/BusDetail";
+import BusDropoff from "./pages/selectbooking/BusDropoff";
+import BusMonsoon from "./pages/selectbooking/BusMonsoon";
+import CheckoutPage from "./pages/selectbooking/CheckoutPage";
+import CongratulationPage from "./pages/selectbooking/CongratulationPage";
+import HCheckoutPage from "./pages/selectbooking/hotelcheckout";
+import RatanCard from "./pages/selectbooking/RatanCard";
 import viewticket from "./pages/selectbooking/ViewTicket";
-import "./assets/css/mediaQuery.css";
 
 import Payment from "./pages/selectbooking/Payment";
 
 import hPayment from "./pages/selectbooking/hPayment";
-import TravellerCard from "./pages/travesaly/TravellerCard";
-import TravellerTicket from "./pages/travesaly/TravellerTicket";
 // import DmTicket from './pages/dm pass/dmtickets/DmTicket';
 
 import BusTicketDetail from "./pages/selectbooking/BusTicketDetail";
 import PackageTicketDetail from "./pages/selectbooking/PackageTicketDetail";
-import AddTaxi from "./pages/VenderOrgAdd/AddTaxi";
-import AddTravelAgent from "./pages/VenderOrgAdd/AddTravelAgent";
-import AddInfluencer from "./pages/VenderOrgAdd/AddInfluencer";
-import Registration from "./pages/VenderOrgAdd/Registration";
 
 /// imports Hotel Details
-import HotelSingleDetails from "./pages/hotelBooking/HotelSingleDetails";
-import HotelDetails from "./pages/Hotel/HotelDetails";
-import HotelSearch from "./pages/Hotel/HotelSearch";
-import HotelList from "./pages/Hotel/HotelList";
-import HotelConfirmation from "./pages/selectbooking/HotelConfirmation";
-import Hcongratulations from "./pages/selectbooking/hCongratulations";
-import HotelTicketDetail from "./pages/selectbooking/HotelTicketDetail";
-import HotelTicketPay from "./pages/selectbooking/AtHotelPay";
 import "./assets/css/hotellist.css";
+import HotelDetails from "./pages/Hotel/HotelDetails";
+import HotelList from "./pages/Hotel/HotelList";
+import HotelSearch from "./pages/Hotel/HotelSearch";
+import HotelSingleDetails from "./pages/hotelBooking/HotelSingleDetails";
+import HotelTicketPay from "./pages/selectbooking/AtHotelPay";
+import Hcongratulations from "./pages/selectbooking/hCongratulations";
+import HotelConfirmation from "./pages/selectbooking/HotelConfirmation";
+import HotelTicketDetail from "./pages/selectbooking/HotelTicketDetail";
 
 import CabConfirmation from "./pages/Cab/CabConfirmation";
-import Cab from "./pages/Cab/CabSearch";
 import CabList from "./pages/Cab/CabList";
-import Profile from "./pages/profile/profile";
-import BookProfile from "./pages/profile/BookingProfile";
+import Cab from "./pages/Cab/CabSearch";
 
 import AudioJourney from "./pages/audioJourney/AudioJourney";
 import AudioJourneyDetail from "./pages/audioJourneyDeatil/AudioJourneyDetail";
@@ -106,7 +62,7 @@ function App() {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={PreHome} />
+            {/* <Route exact path="/" component={PreHome} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/bookingprofile" component={BookProfile} />
@@ -172,11 +128,8 @@ function App() {
             <Route exact path="/traveller_ticket" component={TravellerTicket} />
             <Route exact path="/dmpass" component={DmTicket2} />
             <Route exact path="/dmticket" component={DmPass} />
-            <Route exact path="/pass" component={Pass} />
-            <Route exact path="/buspass" component={BusPass} />
-            <Route exact path="/buspass" component={BusDetail} />
-            <Route exact path="/search" component={Search} />
-            <Route exact path="/locations" component={Locations} />
+            <Route exact path="/pass" component={Pass} /> */}
+            <Route exact path="/" component={BusDetail} />
             <Route exact path="/busdetail" component={BusDetail} />
             <Route exact path="/busmonsoon" component={BusMonsoon} />
             <Route exact path="/boarding" component={Boarding} />
@@ -191,11 +144,6 @@ function App() {
               path="/congratulation-page"
               component={CongratulationPage}
             />
-            <Route exact path="/add-form" component={AddForm} />
-            <Route exact path="/add-hotel" component={AddHotel} />
-            <Route exact path="/add-taxi" component={AddTaxi} />
-            <Route exact path="/add-travel-agent" component={AddTravelAgent} />
-            <Route exact path="/add-influencer" component={AddInfluencer} />
             <Route
               exact
               path="/CongratulationPage"

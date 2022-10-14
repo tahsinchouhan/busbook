@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Form, Dropdown, Button } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import DatePicker from "react-datepicker";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../../assets/css/buspass.css";
 import bus from "../../assets/img/bus.png";
 import calendar from "../../assets/img/calendar.png";
-import { useHistory } from "react-router-dom";
-import DatePicker from "react-datepicker";
 import Header from "../../components/Header";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { API_PATH } from "../../Path/Path";
-import { useDispatch } from "react-redux";
-import {
-  setRouteData,
-  setRouteId,
-} from "../../redux/actions"; 
-import Footer from "../travesaly/Footer";
+import { setRouteData, setRouteId } from "../../redux/actions";
 import SeoData from "../../SeoData.json";
+import Footer from "../travesaly/Footer";
 
 function BusPass() {
   const history = useHistory();
@@ -140,9 +137,7 @@ function BusPass() {
                 </Form.Group>
               </Col>
               <Col xs={12} md={4} className="">
-                <Form.Group
-                  controlId="exampleForm.ControlInput1"
-                >
+                <Form.Group controlId="exampleForm.ControlInput1">
                   <Form.Label
                     className="formselect"
                     style={{
@@ -179,7 +174,14 @@ function BusPass() {
               </Col>
             </Row>
           </Container>
-          <div className="location-btn">
+          <div
+            className="location-btn"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
             <Button className="locationpass-btn" onClick={onSubmit}>
               Continue
             </Button>
